@@ -7,7 +7,7 @@ resource "aws_security_group" "lambda_sg" {
 
   name        = "debug-lambda-sg"
   description = "Security group for debug lambda"
-  vpc_id      = data.aws_vpc.spoke_v3_default.id
+  vpc_id      = data.aws_vpc.default.id
   egress {
     description      = "Allow all outbound IPv4 traffic"
     from_port        = 0
